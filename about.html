@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navigation navbar-expand-md navbar-light">
+      <div class="container">
+        <a class="navbar" href="#">DHRUV KHORADIYA</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="navbar" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="navbar" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="containe">
+      <section class="myd">
+        <h2>My Carrer Goals</h2>
+        <p id="carrer"></p>
+      </section>
+    </div>
+  </body>
+  <footer>
+    <div class="container">
+      <div class="row ftr">
+        <div class="col-md-6 ftrcl">
+          <p>Made By Dhruv Khoradiya</p>
+        </div>
+        <div class="col-md-6 socl">
+          <div class="social-links socll">
+            <a href="#" target="_blank"
+              ><i class="icn fab fa-facebook-f"></i
+            ></a>
+            <a href="https://twitter.com/KhoradiyaDhruv" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://linkedin.com/in/dhruv-khoradiya-250035226"
+              target="_blank"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://github.com/Dhruv0201/" target="_blank"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    let careerGoalString =
+      "My career goal is to become a skilled and versatile software developer who can create innovative solutions to complex problems. I want to gain expertise in various programming languages and technologies, and work on projects that challenge me to learn and grow. I am particularly interested in developing applications that can make a positive impact on people's lives, such as healthcare and education technology. I am also passionate about exploring the possibilities of emerging technologies like artificial intelligence and blockchain, and how they can be used to create innovative solutions. In addition to technical skills, I believe that effective communication and collaboration are key to succeeding in any career. I aim to develop strong communication and teamwork skills, and to work in environments that encourage creativity and collaboration. Ultimately, my goal is to build a fulfilling career that allows me to make a positive impact on society";
+    function type(text) {
+      let index = 0;
+      const typingText = document.getElementById("carrer");
+      function typenext() {
+        if (index < text.length) {
+          typingText.innerHTML += text.charAt(index);
+          index++;
+          setTimeout(typenext, 20);
+        }
+      }
+      typenext();
+    }
+    type(careerGoalString);
+  </script>
+</html>
